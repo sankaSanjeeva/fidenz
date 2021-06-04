@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import './assets/scss/variable';
+@import './assets/scss/_icon.scss';
+
+body {
+    margin: 0;
+    background-color: $main-bg-color;
+    background-image: url(./assets/images/main-bg.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    font-family: 'Open Sans', sans-serif;
+    color: $main-text-color;
+}

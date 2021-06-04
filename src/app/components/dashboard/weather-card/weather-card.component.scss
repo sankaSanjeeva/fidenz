@@ -1,0 +1,103 @@
+.content {
+    width: 100%;
+    border-radius: 5px;
+
+    &__header {
+        height: 217px;
+        background-image: url(../../../../assets/images/card-bg.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-color: yellow;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &__column {
+            text-align: center;
+
+            .country {
+                font-size: 38px;
+                font-weight: bold;
+            }
+    
+            .time {
+                font-size: 21px;
+            }
+
+            .description {
+                display: flex;
+                justify-content: center;
+                margin-top: 28px;
+                font-size: 25px;
+
+                img {
+                    margin-right: 15px;
+                    width: 50px;
+                }
+            }
+
+            .temp {
+                font-size: 85px;
+            }
+        }
+
+        .btn-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+    }
+
+    .bg {
+        &--04n {
+            background-color: #6249cc;
+        }
+        &--03d {
+            background-color: red;
+        }
+        &--10n {
+            background-color: #de944e;
+        }
+        &--02n {
+            background-color: #388ee7;
+        }
+        &--04d {
+            background-color: #9c3a3a;
+        }
+        &--01d {
+            background-color: #40b681;
+        }
+    }
+
+    &__footer {
+        height: 150px;
+        background-color: #383b47;
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 15px;
+
+        &__colum {
+            width: 100%;
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-weight: 600;
+            height: 80px;
+
+            &:not(:last-child) {
+                border-right: 2px solid #585858;
+            }
+
+            &:nth-child(2) {
+                span {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

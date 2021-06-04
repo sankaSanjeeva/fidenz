@@ -1,0 +1,35 @@
+header {
+    height: 150px;
+
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        img {
+            margin-right: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+    }
+}
+
+section {
+    min-height: calc(100vh - 244px);
+}
+
+footer {
+    height: 94px;
+    background-color: #30333d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        color: #f1f1f1;
+        opacity: .5;
+    }
+}

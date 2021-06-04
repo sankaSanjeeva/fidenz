@@ -1,0 +1,33 @@
+<div class="content">
+    <div class="content__header  bg--{{dataSource?.weather[0].icon}}">
+        <div class="content__header__column">
+            <div class="country">{{dataSource?.name}}, {{dataSource?.sys?.country}}</div>
+            <div class="time">{{dataSource?.dt | date:'h:mm a, MMM d'}}</div>
+            <div class="description">
+                <img src="../../../../assets/images/rain.png" alt="">
+                <div>{{dataSource?.weather[0].description | titlecase}}</div>
+            </div>
+        </div>
+        <div class="content__header__column">
+            <div  class="temp">{{dataSource?.main?.temp| number:'1.0-0'}}°C</div>
+            <div>Temp Min: {{dataSource?.main?.temp_min}}°C</div>
+            <div>Temp Max: {{dataSource?.main?.temp_max}}°C</div>
+        </div>
+        <div class="btn-close"><img src="../../../../assets/images/close.png" alt=""></div>
+    </div>
+    <div class="content__footer">
+        <div class="content__footer__colum">
+            <span>Pressure: {{dataSource?.main?.pressure}}hPa</span>
+            <span>Humidity: {{dataSource?.main?.humidity}}%</span>
+            <span>Visibility: {{dataSource?.visibility / 1000 | number:'1.1-1'}}km</span>
+        </div>
+        <div class="content__footer__colum">
+            <span><img src="../../../../assets/images/vector.png" alt=""></span>
+            <span>{{dataSource?.wind?.speed | number:'1.1-1'}}m/s {{dataSource?.wind?.deg}}Degree</span>
+        </div>
+        <div class="content__footer__colum">
+            <span>Sunrise: {{dataSource?.sys?.sunrise | date:'h:mm a'}}</span>
+            <span>Sunset: {{dataSource?.sys?.sunset | date:'h:mm a'}}</span>
+        </div>
+    </div>
+</div>

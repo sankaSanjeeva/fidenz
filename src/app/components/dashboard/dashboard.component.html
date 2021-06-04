@@ -1,0 +1,9 @@
+<div class="content">
+    <div class="content__header">
+        <input type="text" placeholder="Enter a city" [formControl]="name">
+        <button (click)="addCity()">Add City</button>
+    </div>
+    <div class="content__body">
+        <app-weather-card *ngFor="let weatherInfo of weatherInfoData" [dataSource]="weatherInfo" routerLink="/view-weather/{{weatherInfo?.id}}"></app-weather-card>
+    </div>
+</div>

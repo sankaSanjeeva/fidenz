@@ -1,0 +1,37 @@
+<div class="content">
+    <div class="content__card">
+        <div class="content__card__header">
+            <div class="btn-back" routerLink="/dashboard">
+                <img src="../../../assets/images/back.png" alt="">
+            </div>
+            <div class="city">{{dataSource?.name}}, {{dataSource?.sys?.country}}</div>
+            <div class="time">{{dataSource?.dt | date:'h:mm a, MMM d'}}</div>
+            <div class="temp">
+                <div class="column border">
+                    <div class="icon"><img src="../../../assets/images/rain.png" alt=""></div>
+                    <div class="description">{{dataSource?.weather[0].description | titlecase}}</div>
+                </div>
+                <div class="column">
+                    <div  class="value">{{dataSource?.main?.temp| number:'1.0-0'}}°C</div>
+                    <div>Temp Min: {{dataSource?.main?.temp_min}}°C</div>
+                    <div>Temp Max: {{dataSource?.main?.temp_max}}°C</div>
+                </div>
+            </div>
+        </div>
+        <div class="content__card__footer">
+            <div class="content__card__footer__colum">
+                <span><span class="text-bold">Pressure: </span>{{dataSource?.main?.pressure}}hPa</span>
+                <span><span class="text-bold">Humidity: </span>{{dataSource?.main?.humidity}}%</span>
+                <span><span class="text-bold">Visibility: </span>{{dataSource?.visibility / 1000 | number:'1.1-1'}}km</span>
+            </div>
+            <div class="content__card__footer__colum">
+                <span><img src="../../../../assets/images/vector.png" alt=""></span>
+                <span class="text-bold">{{dataSource?.wind?.speed | number:'1.1-1'}}m/s {{dataSource?.wind?.deg}}Degree</span>
+            </div>
+            <div class="content__card__footer__colum">
+                <span><span class="text-bold">Sunrise: </span>{{dataSource?.sys?.sunrise | date:'h:mm a'}}</span>
+                <span><span class="text-bold">Sunset: </span>{{dataSource?.sys?.sunset | date:'h:mm a'}}</span>
+            </div>
+        </div>
+    </div>
+</div>

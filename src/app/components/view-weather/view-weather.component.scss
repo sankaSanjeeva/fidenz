@@ -1,0 +1,104 @@
+@import '../../../assets/scss/responsive';
+
+.content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    &__card {
+        width: 1400px;
+        font-size: 25px;
+
+        @include screen(xxl) {
+            width: 90%;
+        }
+
+        &__header {
+            height: 480px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #388ee7;
+            border-radius: 10px 10px 0 0;
+
+            .btn-back {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                cursor: pointer;
+            }
+
+            .city {
+                font-size: 37px;
+            }
+
+            .time {
+                font-size: 21px;
+            }
+
+            .temp {
+                display: flex;
+                margin-top: 80px;
+
+                .column {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 275px;
+
+                    .icon {
+                        margin-bottom: 50px;
+
+                        img {
+                            width: 50px;
+                        }
+                    }
+
+                    .value {
+                        font-size: 85px;
+                        line-height: 65px;
+                        margin-bottom: 30px;
+                    }
+                }
+
+                .border {
+                    border-right: 2px solid #72b8ff;
+                }
+            }
+        }
+
+        &__footer {
+            height: 260px;
+            border-radius: 0 0 10px 10px;
+            background-color: #383b47;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            &__colum {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                height: 80px;
+    
+                &:not(:last-child) {
+                    border-right: 2px solid #585858;
+                }
+    
+                &:not(:first-child) {
+                    span {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+    }
+}
